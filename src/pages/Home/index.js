@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -6,11 +6,12 @@ import {
   TouchableOpacity,
   Modal,
   TextInput,
+  SafeAreaView,
 } from 'react-native';
 
 import style from '../../styles/homeStyle';
 
-import {SearchIcon} from '../../assets/icons';
+import { SearchIcon } from '../../assets/icons';
 
 const NavBar = () => {
   return (
@@ -20,7 +21,7 @@ const NavBar = () => {
     </View>
   );
 };
-const Header = ({navigation}) => {
+const Header = ({ navigation }) => {
   return (
     <View style={style.header}>
       <Text style={[style.headerText, style.activeHeaderText]}>Home</Text>
@@ -37,7 +38,7 @@ const Header = ({navigation}) => {
     </View>
   );
 };
-const Actions = ({navigation}) => {
+const Actions = ({ navigation }) => {
   const [modalvisible, setModalvisible] = useState(false);
   return (
     <View style={style.actions}>
@@ -75,7 +76,7 @@ const Actions = ({navigation}) => {
               <Text style={style.modalCloseIcon}>x</Text>
             </TouchableOpacity>
             <TextInput style={style.modalSearch} placeholder="search" />
-            <TouchableOpacity onPress={()=>navigation.navigate('Search')} style={style.modalSearchButton}>
+            <TouchableOpacity onPress={() => navigation.navigate('Search')} style={style.modalSearchButton}>
               <Text style={style.modalSearchButtonText}>SEARCH NOW</Text>
             </TouchableOpacity>
           </View>
@@ -85,13 +86,16 @@ const Actions = ({navigation}) => {
   );
 };
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
   return (
-    <View style={style.home}>
-      <NavBar />
-      <Header navigation={navigation} />
-      <Actions navigation={navigation}/>
-    </View>
+    <SafeAreaView>
+
+      <View style={style.home}>
+        <NavBar />
+        <Header navigation={navigation} />
+        <Actions navigation={navigation} />
+      </View>
+    </SafeAreaView>
   );
 };
 

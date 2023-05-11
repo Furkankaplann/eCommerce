@@ -1,8 +1,9 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 const style = StyleSheet.create({
   home: {
     backgroundColor: 'white',
     height: '100%',
+
   },
   navBar: {
     flexDirection: 'row',
@@ -68,43 +69,43 @@ const style = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 15,
-    alignItems:'center'
+    alignItems: 'center'
   },
   modalCloseButton: {
     alignItems: 'flex-end',
-    width:'100%'
+    width: '100%'
   },
   modalCloseIcon: {
     fontSize: 25,
-    fontWeight:'bold',
-    marginRight:10
+    fontWeight: 'bold',
+    marginRight: 10
   },
-  modalSearch:{
-    borderColor:'#CACACA',
-    borderWidth:1,
-    borderRadius:5,
-    backgroundColor:'#F1F1F1',
-    marginTop:55,
-    paddingHorizontal:15,
-    width:'100%',
-    padding:10
+  modalSearch: {
+    borderColor: '#CACACA',
+    borderWidth: 1,
+    borderRadius: 5,
+    backgroundColor: '#F1F1F1',
+    marginTop: 55,
+    paddingHorizontal: 15,
+    width: '100%',
+    padding: 10
   },
-  modalSearchButton:{
-    backgroundColor:'rgba(45, 158, 247, 0.45)',
-    alignItems:'center',
-    marginTop:20,
-    paddingVertical:10,
-    width:'50%',
-    borderRadius:5,
+  modalSearchButton: {
+    backgroundColor: 'rgba(45, 158, 247, 0.45)',
+    alignItems: 'center',
+    marginTop: 20,
+    paddingVertical: 10,
+    width: '50%',
+    borderRadius: 5,
 
   },
-  modalSearchButtonText:{
-    fontWeight:'bold',
-    color:'white',
-    fontSize:15,
+  modalSearchButtonText: {
+    fontWeight: 'bold',
+    color: 'white',
+    fontSize: 15,
 
   }
-  
+
 });
 
 export default style;
