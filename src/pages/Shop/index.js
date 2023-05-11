@@ -3,7 +3,6 @@ import {
   View,
   Text,
   Image,
-  ImageBackground,
   ScrollView,
   TouchableOpacity,
   SafeAreaView,
@@ -14,13 +13,13 @@ import ShopCard from '../../components/ShopCard';
 const TopContainer = ({navigation}) => {
   return (
     <SafeAreaView>
-      <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Image
-          source={require('../../assets/icons/chevron-left.png')}
-          style={style.chevronIcon}
-        />
-      </TouchableOpacity>
       <View style={style.topContainer}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Image
+            source={require('../../assets/icons/chevron-left.png')}
+            style={style.chevronIcon}
+          />
+        </TouchableOpacity>
         <Text style={style.topContainerTitle}>Shop</Text>
         <View style={style.breadCrumb}>
           <Text style={style.breadCrumbText1}>Home</Text>

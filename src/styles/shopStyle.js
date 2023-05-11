@@ -11,8 +11,7 @@ const style = StyleSheet.create({
   chevronIcon: {
     width: 30,
     height: 35,
-    left: 15,
-    top: 40,
+    right: '40%',
   },
   topContainerTitle: {
     fontWeight: '700',

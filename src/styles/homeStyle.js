@@ -32,6 +32,10 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  userIcon: {
+    width: 24,
+    height:24, 
+   },
   topActionsText: {
     fontWeight: '400',
     fontSize: 27,
