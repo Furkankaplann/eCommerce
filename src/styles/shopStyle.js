@@ -8,6 +8,11 @@ const style=StyleSheet.create({
         alignItems:'center',
         justifyContent:'space-around'
     },
+    chevronIcon:{
+        width:24,
+        height:24,
+
+    },
     topContainerTitle:{
         fontWeight:'700',
         fontSize:24,

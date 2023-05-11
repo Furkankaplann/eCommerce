@@ -1,21 +1,27 @@
 import React from 'react';
-import {View, Text, Image, ImageBackground, ScrollView} from 'react-native';
+import { View, Text, Image, ImageBackground, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
 import style from '../../styles/shopStyle';
 import ShopCard from '../../components/ShopCard';
 
 const TopContainer = () => {
   return (
-    <View style={style.topContainer}>
-      <Text style={style.topContainerTitle}>Shop</Text>
-      <View style={style.breadCrumb}>
-        <Text style={style.breadCrumbText1}>Home</Text>
-        <Image
-          style={style.breadCrumbImage}
-          source={require('../../assets/images/arrow-right.png')}
-        />
-        <Text style={style.breadCrumbText2}>Shop</Text>
+    <SafeAreaView>
+      <View style={style.topContainer}>
+        <TouchableOpacity>
+          <Image source={require('../../assets/icons/chevron-left.png')}
+            style={style.chevronIcon} />
+        </TouchableOpacity>
+        <Text style={style.topContainerTitle}>Shop</Text>
+        <View style={style.breadCrumb}>
+          <Text style={style.breadCrumbText1}>Home</Text>
+          <Image
+            style={style.breadCrumbImage}
+            source={require('../../assets/images/arrow-right.png')}
+          />
+          <Text style={style.breadCrumbText2}>Shop</Text>
+        </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 const ShopCards = () => {

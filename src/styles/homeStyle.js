@@ -86,7 +86,8 @@ const style = StyleSheet.create({
     backgroundColor:'#F1F1F1',
     marginTop:55,
     paddingHorizontal:15,
-    width:'100%'
+    width:'100%',
+    padding:10
   },
   modalSearchButton:{
     backgroundColor:'rgba(45, 158, 247, 0.45)',
