@@ -1,16 +1,26 @@
 import React from 'react';
-import { View, Text, Image, ImageBackground, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  ImageBackground,
+  ScrollView,
+  TouchableOpacity,
+  SafeAreaView,
+} from 'react-native';
 import style from '../../styles/shopStyle';
 import ShopCard from '../../components/ShopCard';
 
-const TopContainer = () => {
+const TopContainer = ({navigation}) => {
   return (
     <SafeAreaView>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
+        <Image
+          source={require('../../assets/icons/chevron-left.png')}
+          style={style.chevronIcon}
+        />
+      </TouchableOpacity>
       <View style={style.topContainer}>
-        <TouchableOpacity>
-          <Image source={require('../../assets/icons/chevron-left.png')}
-            style={style.chevronIcon} />
-        </TouchableOpacity>
         <Text style={style.topContainerTitle}>Shop</Text>
         <View style={style.breadCrumb}>
           <Text style={style.breadCrumbText1}>Home</Text>
@@ -51,10 +61,10 @@ const ShopCards = () => {
   );
 };
 
-const Shop = () => {
+const Shop = ({navigation}) => {
   return (
     <ScrollView style={style.shop}>
-      <TopContainer />
+      <TopContainer navigation={navigation} />
       <ShopCards />
     </ScrollView>
   );
